@@ -1,0 +1,47 @@
+public class Spiel{
+  private Spieler[] spieler;
+  private int fertig;
+  public Spiel(int pSpieler){
+    spieler=new Spieler[pSpieler];
+    fertig=0;
+  }
+  public int spielerhinzufuegen(Spieler pSpieler){
+    for (int i=0;i<spieler.length;i++) {
+      if (spieler[i]==null) {
+        spieler[i]=pSpieler;
+        pSpieler.setNr(i);
+        return i;
+      }
+    }
+    return -1;
+  }
+  public boolean spielVoll(){
+    for (int i=0;i<spieler.length;i++) {
+      if (spieler[i]==null) {
+        return false;
+      }
+    }
+    return true;
+  }
+  public Spieler[] getSpieler(){
+    return spieler;
+  }
+  public void punkteGeben(int pSpieler, int pPunkte){
+    spieler[pSpieler].setPunkte(pPunkte);
+    fertig++;
+  }
+  public Spieler gewinner(){
+    if (fertig==spieler.length) {
+      int best=-1;
+      Spieler bester=new Spieler("", "", 0, 0);
+      for (int i=0;i<spieler.length;i++) {
+        if (spieler[i].getPunkte()>best) {
+          best=spieler[i].getPunkte();
+          bester=spieler[i];
+        }
+      }
+      return bester;
+    }
+    return null;
+  }
+}   
