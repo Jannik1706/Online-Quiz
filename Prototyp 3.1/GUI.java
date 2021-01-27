@@ -1279,6 +1279,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_loginActionPerformed
 
     private void antwort1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antwort1ButtonActionPerformed
+        quizWeiterButton.setVisible(true);
         if (antwort1Button.getText().equals(richtigeAntwort)) {
            richtig++;
            antwort1Button.setBackground(Color.GREEN);
@@ -1297,6 +1298,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_antwort1ButtonActionPerformed
 
     private void antwort2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antwort2ButtonActionPerformed
+        quizWeiterButton.setVisible(true);
         if (antwort2Button.getText().equals(richtigeAntwort)) {
            richtig++;
            antwort2Button.setBackground(Color.GREEN);
@@ -1315,6 +1317,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_antwort2ButtonActionPerformed
 
     private void antwort4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antwort4ButtonActionPerformed
+        quizWeiterButton.setVisible(true);
         if (antwort4Button.getText().equals(richtigeAntwort)) {
            richtig++;
            antwort4Button.setBackground(Color.GREEN);
@@ -1338,6 +1341,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_backSignInButtonActionPerformed
 
     private void antwort3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antwort3ButtonActionPerformed
+        quizWeiterButton.setVisible(true);
         if (antwort3Button.getText().equals(richtigeAntwort)) {
            richtig++;
            antwort3Button.setBackground(Color.GREEN);
@@ -1386,6 +1390,7 @@ public class GUI extends javax.swing.JFrame {
       }
       CardLayout card = (CardLayout)masterPanel.getLayout();
       card.show(masterPanel, "quizPanel");
+      quizWeiterButton.setVisible(false);
       antwort1Button.setBackground(Color.WHITE);
       antwort2Button.setBackground(Color.WHITE);
       antwort3Button.setBackground(Color.WHITE);
