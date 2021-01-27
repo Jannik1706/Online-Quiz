@@ -5,6 +5,7 @@
  */
 
 import java.awt.CardLayout;
+import java.awt.Color;
 
 /**
  *
@@ -89,12 +90,24 @@ public class GUI extends javax.swing.JFrame {
         antwort3Button = new javax.swing.JButton();
         antwort2Button = new javax.swing.JButton();
         antwort4Button = new javax.swing.JButton();
-        frageNrLabel = new javax.swing.JLabel();
+        frageNrTextfield = new javax.swing.JLabel();
         timerLabel = new javax.swing.JLabel();
+        quizWeiterButton = new javax.swing.JButton();
         wartenPanel = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        testWarteButton = new javax.swing.JButton();
+        postLobbyPanel = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        platzLabel = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        anzGesamtLabel = new javax.swing.JLabel();
+        anzFalschLabel = new javax.swing.JLabel();
+        anzRichtigLabel = new javax.swing.JLabel();
+        jPanel18 = new javax.swing.JPanel();
+        postLobbyBackButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Quizspiel");
@@ -265,7 +278,7 @@ public class GUI extends javax.swing.JFrame {
 
         backSignInButton.setBackground(new java.awt.Color(255, 255, 255));
         backSignInButton.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        backSignInButton.setText("zurück");
+        backSignInButton.setText("zurÃ¼ck");
         backSignInButton.setBorderPainted(false);
         backSignInButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -377,7 +390,7 @@ public class GUI extends javax.swing.JFrame {
 
         halloLabel.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
         halloLabel.setForeground(new java.awt.Color(255, 255, 255));
-        halloLabel.setText("Willkommen zurück 'USER'!");
+        halloLabel.setText("Willkommen zurÃ¼ck 'USER'!");
         halloLabel.setToolTipText("");
 
         ranked.setBackground(new java.awt.Color(255, 255, 255));
@@ -399,7 +412,7 @@ public class GUI extends javax.swing.JFrame {
 
         signout.setBackground(new java.awt.Color(255, 255, 255));
         signout.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        signout.setText("Zurück");
+        signout.setText("ZurÃ¼ck");
         signout.setToolTipText("");
         signout.setBorderPainted(false);
         signout.addActionListener(new java.awt.event.ActionListener() {
@@ -552,7 +565,7 @@ public class GUI extends javax.swing.JFrame {
 
         singupBack.setBackground(new java.awt.Color(255, 255, 255));
         singupBack.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        singupBack.setText("zurück");
+        singupBack.setText("zurÃ¼ck");
         singupBack.setBorderPainted(false);
         singupBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -641,7 +654,7 @@ public class GUI extends javax.swing.JFrame {
 
         backadvSeachButton.setBackground(new java.awt.Color(255, 255, 255));
         backadvSeachButton.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        backadvSeachButton.setText("Zurück");
+        backadvSeachButton.setText("ZurÃ¼ck");
         backadvSeachButton.setToolTipText("");
         backadvSeachButton.setBorderPainted(false);
         backadvSeachButton.addActionListener(new java.awt.event.ActionListener() {
@@ -741,7 +754,7 @@ public class GUI extends javax.swing.JFrame {
 
         backQuizAuswButton.setBackground(new java.awt.Color(255, 255, 255));
         backQuizAuswButton.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        backQuizAuswButton.setText("Zurück");
+        backQuizAuswButton.setText("ZurÃ¼ck");
         backQuizAuswButton.setToolTipText("");
         backQuizAuswButton.setBorderPainted(false);
         backQuizAuswButton.addActionListener(new java.awt.event.ActionListener() {
@@ -863,7 +876,7 @@ public class GUI extends javax.swing.JFrame {
 
         antwort1Button.setBackground(new java.awt.Color(255, 255, 255));
         antwort1Button.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        antwort1Button.setText("<html>Antwortmöglichkeit 1</html>");
+        antwort1Button.setText("<html>AntwortmÃ¶glichkeit 1</html>");
         antwort1Button.setToolTipText("");
         antwort1Button.setBorderPainted(false);
         antwort1Button.addActionListener(new java.awt.event.ActionListener() {
@@ -874,7 +887,7 @@ public class GUI extends javax.swing.JFrame {
 
         antwort3Button.setBackground(new java.awt.Color(255, 255, 255));
         antwort3Button.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        antwort3Button.setText("<html>Antwortmöglichkeit 3</html>");
+        antwort3Button.setText("<html>AntwortmÃ¶glichkeit 3</html>");
         antwort3Button.setToolTipText("");
         antwort3Button.setBorderPainted(false);
         antwort3Button.addActionListener(new java.awt.event.ActionListener() {
@@ -885,7 +898,7 @@ public class GUI extends javax.swing.JFrame {
 
         antwort2Button.setBackground(new java.awt.Color(255, 255, 255));
         antwort2Button.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        antwort2Button.setText("<html>Antwortmöglichkeit 2</html>");
+        antwort2Button.setText("<html>AntwortmÃ¶glichkeit 2</html>");
         antwort2Button.setBorderPainted(false);
         antwort2Button.setMaximumSize(new java.awt.Dimension(119, 39));
         antwort2Button.setMinimumSize(new java.awt.Dimension(119, 39));
@@ -897,7 +910,7 @@ public class GUI extends javax.swing.JFrame {
 
         antwort4Button.setBackground(new java.awt.Color(255, 255, 255));
         antwort4Button.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
-        antwort4Button.setText("<html>Antwortmöglichkeit 4</html>");
+        antwort4Button.setText("<html>AntwortmÃ¶glichkeit 4</html>");
         antwort4Button.setBorderPainted(false);
         antwort4Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -905,17 +918,26 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        frageNrLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        frageNrLabel.setForeground(new java.awt.Color(255, 255, 255));
-        frageNrLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        frageNrLabel.setText("Frage \"nr\"");
-        frageNrLabel.setToolTipText("");
-        frageNrLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        frageNrTextfield.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        frageNrTextfield.setForeground(new java.awt.Color(255, 255, 255));
+        frageNrTextfield.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        frageNrTextfield.setText("Frage \"nr\"");
+        frageNrTextfield.setToolTipText("");
+        frageNrTextfield.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         timerLabel.setFont(new java.awt.Font("Impact", 1, 24)); // NOI18N
         timerLabel.setForeground(new java.awt.Color(255, 255, 255));
         timerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        timerLabel.setText("12");
+
+        quizWeiterButton.setBackground(new java.awt.Color(255, 255, 255));
+        quizWeiterButton.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        quizWeiterButton.setText("<html>Weiter</html>");
+        quizWeiterButton.setBorderPainted(false);
+        quizWeiterButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quizWeiterButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -925,12 +947,12 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(timerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(frageNrLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(frageNrTextfield, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel14Layout.createSequentialGroup()
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(antwort3Button)
-                            .addComponent(antwort1Button, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE))
+                            .addComponent(antwort3Button, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(antwort1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel14Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
@@ -940,12 +962,16 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(antwort4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(quizWeiterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(118, 118, 118))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
-                .addComponent(frageNrLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(frageNrTextfield, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
@@ -953,12 +979,14 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(antwort1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(antwort2Button, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(antwort4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(antwort3Button, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(antwort3Button)
+                    .addComponent(antwort4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(timerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(quizWeiterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout quizPanelLayout = new javax.swing.GroupLayout(quizPanel);
@@ -988,15 +1016,8 @@ public class GUI extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("<html>Bitte warten Sie, während ein passender Gegner gesucht wird</html>");
+        jLabel4.setText("<html>Bitte warten Sie, wÃ¤hrend ein passender Gegner gesucht wird</html>");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        testWarteButton.setText("test");
-        testWarteButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                testWarteButtonActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -1004,9 +1025,7 @@ public class GUI extends javax.swing.JFrame {
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
                 .addContainerGap(44, Short.MAX_VALUE)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(testWarteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel16Layout.setVerticalGroup(
@@ -1014,9 +1033,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGap(227, 227, 227)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(testWarteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addContainerGap(250, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout wartenPanelLayout = new javax.swing.GroupLayout(wartenPanel);
@@ -1034,6 +1051,144 @@ public class GUI extends javax.swing.JFrame {
         );
 
         masterPanel.add(wartenPanel, "wartenPanel");
+
+        postLobbyPanel.setBackground(new java.awt.Color(0, 51, 119));
+        postLobbyPanel.setForeground(new java.awt.Color(0, 0, 154));
+        postLobbyPanel.setPreferredSize(new java.awt.Dimension(834, 639));
+
+        jPanel17.setBackground(new java.awt.Color(3, 111, 189));
+        jPanel17.setBorder(new javax.swing.border.MatteBorder(null));
+        jPanel17.setForeground(new java.awt.Color(0, 153, 255));
+
+        jLabel13.setFont(new java.awt.Font("Impact", 0, 48)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("Match Beendet");
+
+        platzLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        platzLabel.setForeground(new java.awt.Color(255, 255, 255));
+        platzLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        platzLabel.setText("Du wurdest Nter Platz!");
+
+        jLabel17.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 153, 0));
+        jLabel17.setText("Richtig");
+
+        jLabel18.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("Falsch");
+        jLabel18.setToolTipText("");
+
+        jLabel19.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("Gesamt");
+
+        anzGesamtLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        anzGesamtLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        anzGesamtLabel.setText("0");
+
+        anzFalschLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        anzFalschLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        anzFalschLabel.setText("0");
+
+        anzRichtigLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        anzRichtigLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        anzRichtigLabel.setText("0");
+
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 185, Short.MAX_VALUE)
+        );
+
+        postLobbyBackButton.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
+        postLobbyBackButton.setText("ZurÃ¼ck zum HauptmenÃ¼");
+        postLobbyBackButton.setBorderPainted(false);
+        postLobbyBackButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                postLobbyBackButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(anzRichtigLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(86, 86, 86)
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(anzFalschLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(82, 82, 82)
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(anzGesamtLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(49, Short.MAX_VALUE))
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(platzLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())))
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addGap(134, 134, 134)
+                .addComponent(postLobbyBackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addGap(87, 87, 87)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(platzLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel17))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(anzGesamtLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(anzFalschLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(anzRichtigLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51)
+                .addComponent(postLobbyBackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(60, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout postLobbyPanelLayout = new javax.swing.GroupLayout(postLobbyPanel);
+        postLobbyPanel.setLayout(postLobbyPanelLayout);
+        postLobbyPanelLayout.setHorizontalGroup(
+            postLobbyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, postLobbyPanelLayout.createSequentialGroup()
+                .addContainerGap(187, Short.MAX_VALUE)
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(191, Short.MAX_VALUE))
+        );
+        postLobbyPanelLayout.setVerticalGroup(
+            postLobbyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        masterPanel.add(postLobbyPanel, "postGamePanel");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1095,7 +1250,7 @@ public class GUI extends javax.swing.JFrame {
           CardLayout card = (CardLayout)masterPanel.getLayout();
           card.show(masterPanel, "mainPanel"); 
         } else {
-          //TODO: IDIOT label für Fehler &&pass.equals(String.valueOf(passwordSignUp2.getPassword())
+          //TODO: IDIOT label fï¿½r Fehler &&pass.equals(String.valueOf(passwordSignUp2.getPassword())
         }
     }//GEN-LAST:event_singupWeiterActionPerformed
 
@@ -1119,29 +1274,62 @@ public class GUI extends javax.swing.JFrame {
       if (!usernameSignInField.getText().isEmpty() && !pass.isEmpty()) {
          c.anmelden(usernameSignInField.getText(),pass);  
       } else {
-          //TODO: IDIOT label für Fehler
+          //TODO: IDIOT label fï¿½r Fehler
         } // end of if-else
     }//GEN-LAST:event_loginActionPerformed
 
     private void antwort1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antwort1ButtonActionPerformed
         if (antwort1Button.getText().equals(richtigeAntwort)) {
            richtig++;
+           antwort1Button.setBackground(Color.GREEN);
+        } else {
+           antwort1Button.setBackground(Color.RED); 
+           if (antwort4Button.getText().equals(richtigeAntwort)){ 
+              antwort4Button.setBackground(Color.GREEN); 
+           }
+           if (antwort2Button.getText().equals(richtigeAntwort)){ 
+              antwort2Button.setBackground(Color.GREEN); 
+           }
+           if (antwort3Button.getText().equals(richtigeAntwort)){ 
+              antwort3Button.setBackground(Color.GREEN); 
+           }
         }
-        c.frageLaden();
     }//GEN-LAST:event_antwort1ButtonActionPerformed
 
     private void antwort2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antwort2ButtonActionPerformed
         if (antwort2Button.getText().equals(richtigeAntwort)) {
            richtig++;
+           antwort2Button.setBackground(Color.GREEN);
+        } else {
+           antwort2Button.setBackground(Color.RED); 
+           if (antwort1Button.getText().equals(richtigeAntwort)){ 
+              antwort1Button.setBackground(Color.GREEN); 
+           }
+           if (antwort4Button.getText().equals(richtigeAntwort)){ 
+              antwort4Button.setBackground(Color.GREEN); 
+           }
+           if (antwort3Button.getText().equals(richtigeAntwort)){ 
+              antwort3Button.setBackground(Color.GREEN); 
+           }
         }
-        c.frageLaden();
     }//GEN-LAST:event_antwort2ButtonActionPerformed
 
     private void antwort4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antwort4ButtonActionPerformed
         if (antwort4Button.getText().equals(richtigeAntwort)) {
            richtig++;
-        }
-        c.frageLaden();
+           antwort4Button.setBackground(Color.GREEN);
+        } else {
+           antwort4Button.setBackground(Color.RED); 
+           if (antwort1Button.getText().equals(richtigeAntwort)){ 
+              antwort1Button.setBackground(Color.GREEN); 
+           }
+           if (antwort2Button.getText().equals(richtigeAntwort)){ 
+              antwort2Button.setBackground(Color.GREEN); 
+           }
+           if (antwort3Button.getText().equals(richtigeAntwort)){ 
+              antwort3Button.setBackground(Color.GREEN); 
+           }
+        } 
     }//GEN-LAST:event_antwort4ButtonActionPerformed
 
     private void backSignInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backSignInButtonActionPerformed
@@ -1152,14 +1340,29 @@ public class GUI extends javax.swing.JFrame {
     private void antwort3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antwort3ButtonActionPerformed
         if (antwort3Button.getText().equals(richtigeAntwort)) {
            richtig++;
+           antwort3Button.setBackground(Color.GREEN);
+        } else {
+           antwort3Button.setBackground(Color.RED); 
+           if (antwort1Button.getText().equals(richtigeAntwort)){ 
+              antwort1Button.setBackground(Color.GREEN); 
+           }
+           if (antwort2Button.getText().equals(richtigeAntwort)){ 
+              antwort2Button.setBackground(Color.GREEN); 
+           }
+           if (antwort4Button.getText().equals(richtigeAntwort)){ 
+              antwort4Button.setBackground(Color.GREEN); 
+           }
         }
-        c.frageLaden();
     }//GEN-LAST:event_antwort3ButtonActionPerformed
 
-    private void testWarteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testWarteButtonActionPerformed
-        CardLayout card = (CardLayout)masterPanel.getLayout();
-        card.show(masterPanel, "quizPanel");
-    }//GEN-LAST:event_testWarteButtonActionPerformed
+    private void quizWeiterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quizWeiterButtonActionPerformed
+       c.frageLaden();
+    }//GEN-LAST:event_quizWeiterButtonActionPerformed
+
+    private void postLobbyBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_postLobbyBackButtonActionPerformed
+      CardLayout card = (CardLayout)masterPanel.getLayout();
+      card.show(masterPanel, "mainPanel"); 
+    }//GEN-LAST:event_postLobbyBackButtonActionPerformed
   
     
     //Client Kommunikations Methoden
@@ -1170,14 +1373,23 @@ public class GUI extends javax.swing.JFrame {
   
     public void frageAnzeigen(String[] pFrage){
       if (pFrage==null) {
+        
         frageTextField.setText(richtig+"/"+fragen);
         antwort1Button.setText("");
         antwort2Button.setText("");
         antwort3Button.setText("");
         antwort4Button.setText("");
         c.ergebnisVerschicken(richtig);
+        CardLayout card = (CardLayout)masterPanel.getLayout();
+        card.show(masterPanel, "postGamePanel");
         return;
       }
+      CardLayout card = (CardLayout)masterPanel.getLayout();
+      card.show(masterPanel, "quizPanel");
+      antwort1Button.setBackground(Color.WHITE);
+      antwort2Button.setBackground(Color.WHITE);
+      antwort3Button.setBackground(Color.WHITE);
+      antwort4Button.setBackground(Color.WHITE);
       frageTextField.setText("<html>" + pFrage[0] + "</html>");
       antwort1Button.setText("<html>" + pFrage[1] + "</html>");
       antwort2Button.setText("<html>" + pFrage[2] + "</html>");
@@ -1185,6 +1397,7 @@ public class GUI extends javax.swing.JFrame {
       antwort4Button.setText("<html>" + pFrage[4] + "</html>");
       richtigeAntwort = "<html>" + pFrage[5] + "</html>";
       fragen++;
+      frageNrTextfield.setText("Frage " + fragen);
     }
   
     public void fehlerAnzeigen(String pFehler){
@@ -1192,7 +1405,11 @@ public class GUI extends javax.swing.JFrame {
     }
   
     public void ergebnis(String pErgebnis){
-      frageTextField.setText("Platz: " + pErgebnis + " " + richtig+ "/" + fragen);
+      platzLabel.setText("Du wurdest " + pErgebnis + ". Platz!");
+      anzRichtigLabel.setText(String.valueOf(richtig));
+      anzGesamtLabel.setText(String.valueOf(fragen));
+      int falsch = fragen - richtig;
+      anzFalschLabel.setText(String.valueOf(falsch));
       richtig=0;
       fragen=0;
     }
@@ -1238,12 +1455,15 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton antwort2Button;
     private javax.swing.JButton antwort3Button;
     private javax.swing.JButton antwort4Button;
+    private javax.swing.JLabel anzFalschLabel;
+    private javax.swing.JLabel anzGesamtLabel;
+    private javax.swing.JLabel anzRichtigLabel;
     private javax.swing.JButton backQuizAuswButton;
     private javax.swing.JButton backSignInButton;
     private javax.swing.JButton backadvSeachButton;
     private javax.swing.JPanel erweiterteSuchePanel;
     private javax.swing.JButton fastgame;
-    private javax.swing.JLabel frageNrLabel;
+    private javax.swing.JLabel frageNrTextfield;
     private javax.swing.JLabel frageTextField;
     private javax.swing.JButton gegenFreundSpielenButton;
     private javax.swing.JLabel halloLabel;
@@ -1251,8 +1471,12 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1269,6 +1493,8 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1285,8 +1511,12 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JPasswordField passwordSignInField;
     private javax.swing.JPasswordField passwordSignUp1;
     private javax.swing.JPasswordField passwordSignUp2;
+    private javax.swing.JLabel platzLabel;
+    private javax.swing.JButton postLobbyBackButton;
+    private javax.swing.JPanel postLobbyPanel;
     private javax.swing.JPanel quizAuswahlPanel;
     private javax.swing.JPanel quizPanel;
+    private javax.swing.JButton quizWeiterButton;
     private javax.swing.JButton ranked;
     private javax.swing.JPanel signinPanel;
     private javax.swing.JButton signout;
@@ -1296,7 +1526,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton singupBack;
     private javax.swing.JButton singupWeiter;
     private javax.swing.JButton statistics;
-    private javax.swing.JButton testWarteButton;
     private javax.swing.JLabel timerLabel;
     private javax.swing.JTextField usernameSignInField;
     private javax.swing.JTextField usernameSignUp;
