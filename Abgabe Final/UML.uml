@@ -1,0 +1,234 @@
+﻿[Files]
+File0=C:\Users\User\Desktop\Quizspiel Jannik, Jan und Erik\Programm\Client.java
+File1=C:\Users\User\Desktop\Quizspiel Jannik, Jan und Erik\Programm\DatabaseConnector.java
+File2=C:\Users\User\Desktop\Quizspiel Jannik, Jan und Erik\Programm\GUI.java
+File3=C:\Users\User\Desktop\Quizspiel Jannik, Jan und Erik\Programm\QueryResult.java
+File4=C:\Users\User\Desktop\Quizspiel Jannik, Jan und Erik\Programm\QuizClient.java
+File5=C:\Users\User\Desktop\Quizspiel Jannik, Jan und Erik\Programm\QuizServer.java
+File6=C:\Users\User\Desktop\Quizspiel Jannik, Jan und Erik\Programm\Spiel.java
+File7=C:\Users\User\Desktop\Quizspiel Jannik, Jan und Erik\Programm\Spieler.java
+File8=C:\Users\User\Desktop\Quizspiel Jannik, Jan und Erik\Programm\StartServer.java
+
+[Box:  - Client]
+X=1703
+Y=40
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - Client$MessageHandler]
+X=1693
+Y=2679
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - Client$MessageHandler$SocketWrapper]
+X=1921
+Y=2679
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - DatabaseConnector]
+X=41
+Y=3096
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - GUI]
+X=1423
+Y=40
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - List<ContentType>]
+X=1221
+Y=40
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - List<ContentType>$ListNode]
+X=1215
+Y=2679
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - QueryResult]
+X=75
+Y=3480
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - Queue<ContentType>]
+X=24
+Y=40
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - Queue<ContentType>$QueueNode]
+X=20
+Y=2679
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - QuizClient]
+X=1415
+Y=2679
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - QuizServer]
+X=408
+Y=2679
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - Server]
+X=567
+Y=40
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - Server$ClientMessageHandler]
+X=200
+Y=2679
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - Server$ClientMessageHandler$ClientSocketWrapper]
+X=803
+Y=2679
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - Server$NewConnectionHandler]
+X=1042
+Y=2679
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - Spiel]
+X=445
+Y=3096
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - Spieler]
+X=662
+Y=3480
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Box:  - StartServer]
+X=405
+Y=3480
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=6
+FontName=Segoe UI
+
+[Diagram]
+comments=0
+OffsetX=0
+OffsetY=0
+Visibility=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+ShowConnections=0
+Fontname=Segoe UI
+Fontsize=6
+ShowObjectDiagram=0
+
+[Connections]
+V0=Client#Client$MessageHandler#AssociationDirected####0#0#0###0#0
+V1=Client#Client$MessageHandler$SocketWrapper#AssociationDirected####0#0#0###0#0
+V2=DatabaseConnector#QueryResult#AssociationDirected####0#0#0###0#0
+V3=GUI#QuizClient#AssociationBidirectional####0#0#0###0#0
+V4=List<ContentType>#List<ContentType>$ListNode#AssociationDirected####0#0#0###0#0
+V5=Queue<ContentType>#Queue<ContentType>$QueueNode#AssociationDirected####0#0#0###0#0
+V6=QuizClient#Client#Inheritends####0#0#0###0#0
+V7=QuizServer#Server#Inheritends####0#0#0###0#0
+V8=QuizServer#DatabaseConnector#AssociationDirected####0#0#0###0#0
+V9=QuizServer#Spieler#Aggregation####0#0#0###0#0
+V10=QuizServer#Spiel#Aggregation####0#0#0###0#0
+V11=Server#Server$ClientMessageHandler#AssociationDirected####0#0#0###0#0
+V12=Server#Server$ClientMessageHandler$ClientSocketWrapper#AssociationDirected####0#0#0###0#0
+V13=Server#Server$NewConnectionHandler#AssociationDirected####0#0#0###0#0
+V14=Spiel#Spieler#Aggregation####0#0#0###0#0
+
+[Interactive]
+I0=
+
